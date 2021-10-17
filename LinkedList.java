@@ -16,9 +16,21 @@ public class LinkedList {
         }
     }
 
-    public int insertAfter(int data) {
-        MyNode node = new MyNode(data);
+    public int search(int data) {
+        MyNode temp = head;
         int flag = 0;
+        while (temp != null) {
+            if (temp.data == data) {
+                flag = 1;
+                break;
+            }
+            temp = temp.next;
+        }
+        return flag;
+    }
+
+    public void insertAfter(int data) {
+        MyNode node = new MyNode(data);
         MyNode temp = head;
         MyNode prev = head;
         while (temp != null) {
@@ -27,12 +39,47 @@ public class LinkedList {
             if (prev.data == 30) {
                 prev.next = node;
                 node.next = temp;
-                flag = 1;
                 break;
             }
 
         }
-        return flag;
+    }
+
+    int delete=0;
+    // delete data in between
+    public int deleteAfter(int data) {
+        int result=search(data);
+        if(result==1) {
+            MyNode temp = head;
+            MyNode prev = head;
+            MyNode nextNode = head;
+
+            while (temp != null) {
+                prev = temp;
+                temp = temp.next;
+
+                if (temp.data == 40) {
+                    nextNode=temp.next;
+                    prev.next=nextNode;
+                    delete=1;
+                    break;
+                }
+
+            }
+
+        }
+        return delete;
+    }
+
+    public int size() {
+        MyNode temp=head;
+        int counter=0;
+        while(temp!=null) {
+            counter++;
+            temp=temp.next;
+        }
+        System.out.println("size of list is : "+counter);
+        return counter;
     }
 
     public void print() {

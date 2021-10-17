@@ -7,10 +7,14 @@ public class LinkedListMain {
         linkedList.push(30);
         linkedList.push(70);
         System.out.println("Linked list");
-        linkedList.print();
 
         linkedList.insertAfter(40);
-        System.out.println("After inserting ");
         linkedList.print();
+
+        linkedList.size();
+        linkedList.deleteAfter(40);
+        System.out.println("After delete ");
+        linkedList.print();
+        linkedList.size();
     }
 }

@@ -10,7 +10,8 @@ public class LinkedListTest {
         linkedList.push(56);
         linkedList.push(30);
         linkedList.push(70);
-        int check = linkedList.insertAfter(40);
+        linkedList.insertAfter(40);
+        int check = linkedList.deleteAfter(40);
         Assert.assertEquals(1, check);
     }
 }
