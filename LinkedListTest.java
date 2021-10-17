@@ -10,18 +10,7 @@ public class LinkedListTest {
         linkedList.push(56);
         linkedList.push(30);
         linkedList.push(70);
-        int check = linkedList.search(30);
+        int check = linkedList.insertAfter(40);
         Assert.assertEquals(1, check);
     }
-
-    @Test
-    public void failTest() {
-        LinkedList linkedList = new LinkedList();
-        linkedList.push(56);
-        linkedList.push(30);
-        linkedList.push(70);
-        int check = linkedList.search(20);
-        Assert.assertEquals(0, check);
-    }
-
 }

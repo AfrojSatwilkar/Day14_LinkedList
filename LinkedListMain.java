@@ -9,6 +9,8 @@ public class LinkedListMain {
         System.out.println("Linked list");
         linkedList.print();
 
-        linkedList.search(30);
+        linkedList.insertAfter(40);
+        System.out.println("After inserting ");
+        linkedList.print();
     }
 }

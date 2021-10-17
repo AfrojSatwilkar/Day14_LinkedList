@@ -16,20 +16,21 @@ public class LinkedList {
         }
     }
 
-    public int search(int data) {
-        MyNode temp = head;
+    public int insertAfter(int data) {
+        MyNode node = new MyNode(data);
         int flag = 0;
+        MyNode temp = head;
+        MyNode prev = head;
         while (temp != null) {
-            if (temp.data == data) {
+            prev = temp;
+            temp = temp.next;
+            if (prev.data == 30) {
+                prev.next = node;
+                node.next = temp;
                 flag = 1;
                 break;
             }
-            temp = temp.next;
-        }
-        if (flag == 1) {
-            System.out.println("element found");
-        } else {
-            System.out.println("element not found");
+
         }
         return flag;
     }
