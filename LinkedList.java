@@ -15,6 +15,14 @@ public class LinkedList {
         }
     }
 
+    public void insertInBetween(int data){
+        MyNode node=new MyNode(data);
+        MyNode temp=head;
+        temp=temp.next;
+        head.next=node;
+        node.next=temp;
+    }
+
     public void print() {
         MyNode temp = head;
         if (head == null) {
@@ -24,6 +32,7 @@ public class LinkedList {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
 
     }
 }
