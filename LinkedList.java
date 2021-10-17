@@ -17,14 +17,14 @@ public class LinkedList {
     }
 
     public void print() {
+        MyNode temp = head;
         if (head == null) {
             System.out.println("Linked List is Empty");
-        } else {
-            MyNode temp = head;
-            while (temp != null) {
-                System.out.print(temp.data+ " ");
-                temp = temp.next;
-            }
         }
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+
     }
 }
