@@ -15,11 +15,14 @@ public class LinkedList {
         }
     }
 
-    public void deleteHead() {
+    public void deleteLast() {
         MyNode temp=head;
-        if(temp!=null) {
-            head=temp.next;
+        MyNode prev=head;
+        while(temp.next!=null) {
+            prev=temp;
+            temp=temp.next;
         }
+        prev.next=null;
     }
 
     public void print() {

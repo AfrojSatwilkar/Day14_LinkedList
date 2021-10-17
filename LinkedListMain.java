@@ -9,8 +9,8 @@ public class LinkedListMain {
         System.out.println("Linked list");
         linkedList.print();
 
-        linkedList.deleteHead();
-        System.out.println("After deleting first node");
+        linkedList.deleteLast();
+        System.out.println("After deleting last node");
         linkedList.print();
     }
 }
