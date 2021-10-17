@@ -15,12 +15,11 @@ public class LinkedList {
         }
     }
 
-    public void insertInBetween(int data){
-        MyNode node=new MyNode(data);
+    public void deleteHead() {
         MyNode temp=head;
-        temp=temp.next;
-        head.next=node;
-        node.next=temp;
+        if(temp!=null) {
+            head=temp.next;
+        }
     }
 
     public void print() {
