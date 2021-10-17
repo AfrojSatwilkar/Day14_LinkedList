@@ -4,25 +4,34 @@ public class LinkedList {
     MyNode head;
     MyNode tail;
 
-    public void append(int data) {
+    public void push(int data) {
         MyNode newNode = new MyNode(data);
         if (head == null) {
             head = newNode;
             tail = newNode;
         } else {
-            tail.next = newNode;
-            tail = newNode;
+            MyNode temp = head;
+            this.head = newNode;
+            newNode.next = temp;
         }
     }
 
-    public void deleteLast() {
-        MyNode temp=head;
-        MyNode prev=head;
-        while(temp.next!=null) {
-            prev=temp;
-            temp=temp.next;
+    public int search(int data) {
+        MyNode temp = head;
+        int flag = 0;
+        while (temp != null) {
+            if (temp.data == data) {
+                flag = 1;
+                break;
+            }
+            temp = temp.next;
         }
-        prev.next=null;
+        if (flag == 1) {
+            System.out.println("element found");
+        } else {
+            System.out.println("element not found");
+        }
+        return flag;
     }
 
     public void print() {
